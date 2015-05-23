@@ -1,0 +1,99 @@
+@import "_tool.scss";
+
+
+
+body{
+	position: relative;
+}
+
+#menubar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 64px;
+	width: 100%;
+	background-color: #0288D1;
+}
+#menubar #toggleMenu{
+	background: url('../images/icon_menu.png') 50% 50% no-repeat;
+	background-size: 48px 48px;
+	height: 48px;
+	width: 48px;
+	float: left;
+	margin: 8px;
+	cursor: pointer;
+}
+
+#menu{
+	position: fixed;
+	width: 320px;
+	height: 100%;
+	z-index: 10;
+	left: -325px; 
+	box-shadow: 3px 0px 0px rgba(187, 187, 187, 0.4);
+	background-color: white;
+	top: 0;
+
+	-webkit-transition: left 0.3s;
+	-moz-transition: left 0.3s;
+	transition: left 0.3s;
+}
+#menu.show{
+	left: 0; 
+}
+.bg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background-color: black;
+	opacity: 0.3;
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+#menu.show .bg{
+	display: block;
+}
+#myself {
+  height: 250px;
+  background: #64B5F6;
+  color: white;
+  font-size: 24pt;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+}
+#myAvatar{
+	background: url('../images/150306SONA.jpg') 50% 50% no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+
+}
+#myname {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 5px #000;
+}
+#menu_list {
+  padding: 250px 16px 0;
+  height: 100%;
+  list-style: none;
+  background: white;
+}
+#menu_list > li{
+	height: 40px;
+  margin: 10px 0;
+  font-weight: bold;
+  letter-spacing: 20px;
+  color: #9e9e9e;
+  cursor: pointer;
+}
+#menu_list > li.active{
+	color: #0288D1;
+}
