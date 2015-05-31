@@ -2,42 +2,102 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="stylesheets/jquery.fullPage.css" rel="stylesheet" />
+    <link href="stylesheets/twentytwenty.css" rel="stylesheet" />
+    <link href="stylesheets/twentytwenty.css" rel="stylesheet" />
     <link href="stylesheets/main.css" rel="stylesheet" />
 
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
  
-    <title>Stacy Lin - works</title>
- 
+    <title>Phantom</title>
+
   </head>
 
   <body >
 
-  <div id='menubar'>
-    <div id='toggleMenu'></div>
-    <div id='breadcrumb'></div>
-  </div>
+  <div id="HomePage">
 
-  <div id='menu'>
-    <div class='bg'></div>
-    <div id='myself'>
-      <div id='myAvatar'></div>
-      <div id='myname'> Stacy Lin </div>
+    <div class="section " id="MainBlock">
+      <div id='contacts'>
+        <div id='fb' title='Facebook'></div>
+        <div id='pixiv' title='Pixiv'></div>
+        <div id='github' title="GitHub"></div>
+      </div>
+      <div id='menuTitle'>
+        <div id='nameLabel'></div>
+        <ul id='menu'>
+          <li><a href="#Main">About</a></li>
+          <li><a href="#codeworks">Coding</a></li>
+          <li><a href="#illustrworks">Works</a></li>
+        </ul>
+      </div>
+      <div id="mainImg">
+        <img src="images/main_1.jpg">
+        <img src="images/main_2.jpg">
+      </div>
+
     </div>
-    <ul id='menu_list'>
-      <li class='active' id='design'>設計</li>
-      <li class='' id='paint'>繪圖</li>
-      <li class='' id='web'>網頁</li>
-    </ul>
+    
+    <div class="section" id="webworkBlock">
+      <div class='worksArea'></div>
+       <h1>AND THIS PAGE</h1>
+    </div>
+
+    <div class="section" id="illuworkBlock">
+       <h1 id='Illusts'>Fanfiction</h1>
+       <div class='worksArea'></div>
+       <div id='contactMe'>
+         <div id='contact'>
+         <span>Contact Me ? 
+          <a class='email' href="mailto:mikage516@gmail.com"></a>
+          <a class='fb' href="https://www.facebook.com/FantasmaMeow"></a>
+         </span>
+         </div>
+       
+       </div>
+    </div>
+
   </div>
 
 
 
+  <!-- library -->
+  <script src="jslib/jquery-2.1.4.min.js"></script>
+  <script src="jslib/handlebars-v3.0.3.js"></script>
+  <script src="jslib/underscore-min.js"></script>
+  <script src="jslib/backbone-min.js"></script>
+  <script src="jslib/jquery.fullPage.js"></script>
+  <script src="jslib/jquery.twentytwenty.js"></script>
+  <script src="jslib/jquery.event.move.js"></script>
 
-    <script src="javascripts/jquery-2.1.4.min.js"></script>
-    <script src="javascripts/handlebars-v3.0.3.js"></script>
-    <script src="javascripts/main.js"></script>
+  <script src="javascripts/main.js"></script>
+  <script src="javascripts/worksModel.js"></script>
     
+
+    <!-- HandleBar Template -->
+  <script id="workTmp" type="text/x-handlebars-template">
+    <div class="work {{type}} clickable" name='{{name}}'>
+      {{#if weburl}}
+      <div class='workTitle'>{{name}}</div>
+      <a href='{{weburl}}' target="_blank">
+       <div style='background:url("{{src}}") 50% 50% no-repeat' class='img'></div>
+       <div>Page LINK</div>
+      </a>
+      {{else}}
+       <div style='background:url("{{src}}") 50% 50% no-repeat' class='img'></div>
+      {{/if}}
+    </div>
+  </script>
+  <script id="previewTmp" type="text/x-handlebars-template">
+    <div id="preview">
+      <div class='bg'></div>
+      <div class='mainArea'>
+        <div class='close clickable'>&times</div>
+        <img src='{{src}}'/>
+      </div>
+    </div>
+  </script>   
   </body>
 
 </html>

@@ -1,99 +1,232 @@
 @import "_tool.scss";
 
 
-
-body{
+html,body{
+	position: relative;
+	height: 100%;
+}
+h1{
+	font-size: 5em;
+	font-family: arial,helvetica;
+	color: #fff;
+	margin:0;
+	padding:0;
+}
+.intro p{
+	color: #fff;
+}
+.clickable{
+	cursor: pointer;
+}
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+	text-align:center;
 	position: relative;
 }
 
-#menubar{
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 64px;
-	width: 100%;
-	background-color: #0288D1;
+.twentytwenty-horizontal .twentytwenty-handle{
+	@include setBackground("phantom.png");
+	@include setSize(120px, 90px);
+  margin-left: -63px;
+  .twentytwenty-left-arrow{
+  	margin-left: -80px;
+  }
+  .twentytwenty-right-arrow {
+	  margin-right: -80px;
+	}	
+	&:before{
+		  margin-bottom: 50px;
+	}
+	&:after{
+		margin-top: 50px;	
+	}
 }
-#menubar #toggleMenu{
-	background: url('../images/icon_menu.png') 50% 50% no-repeat;
-	background-size: 48px 48px;
-	height: 48px;
-	width: 48px;
-	float: left;
-	margin: 8px;
-	cursor: pointer;
+.worksArea {
+	@include setSize(100%, 65vh);
+  overflow: hidden;
+  .work{
+  	@include setSize(38vh, 29vh);
+	  display: inline-block;
+	  margin: 15px;
+	  border-radius: 10px;
+	  overflow: hidden;
+	  .workTitle {
+	  	@include setSize(100%, 35px);
+		  margin-bottom: 5px;
+		  line-height: 35px;
+		  font-size: 20pt;
+		  color: white;
+		}
+  	.img{
+  		@include setSize(100%,100%);
+  		border-radius: 10px;
+  		background-size: cover !important;
+  	}
+  }
+}
+/* Defining each section background and styles
+* --------------------------------------- */
+#MainBlock{
+	background: -webkit-gradient(linear, top left, bottom left, from(#4bbfc3), to(#7baabe));
+	background: -webkit-linear-gradient(#4BBFC3, #7BAABE);
+	background: linear-gradient(#4BBFC3,#7BAABE);
+	#contacts{
+		@include setSize(160px, 40px);
+		@include setPosition(absolute, 0, 20px, auto ,auto);
+		z-index: 1;
+		padding-top: 5px;
+		border-radius: 0 0 10px 10px;
+  	background-color: rgba(255, 255, 255, 0.3);
+		>div{
+			@include setSize(30px, 30px);
+			float: right;
+			margin: 2px 8px;
+			cursor: pointer;
+			border-radius: 50%;
+		}
+		#fb{
+			margin-right: 18px;
+			@include setBackground("fb.png");
+
+		}
+		#pixiv{
+			background-color: #0096DB;
+			@include setBackground("pixiv.jpg");
+		}
+		#github{
+			@include setBackground("GitHub-Mark.png");
+			background-color: white;
+		}
+	}
+	#menuTitle{
+		@include setSize(85%, 80px);
+	  border-bottom: 1px solid rgba(231, 234, 234, 0.4);
+	  margin: 0 auto 20px;
+	  overflow: hidden;
+	  position: relative;
+	  #nameLabel{
+	  	@include setBackground("title.png");
+	  	@include setSize(210px, 75px);
+	  	float: left;
+	  }
+	  #menu{
+	  	padding: 0;
+	  	margin: 0;
+	  	overflow: hidden;
+	  	@include setPosition(absolute, auto, 0, 0, auto);
+	  	>li{
+	  		@include setSize(80px, 30px);
+	  		list-style: none;
+	  		float: left;
+			  text-align: left;
+			  padding-left: 20px;
+			  cursor: pointer;
+			  position: relative;
+			  a{
+			  	text-decoration: none;
+			  	color: white;
+			  	&:hover{
+				  	text-decoration: underline;
+				  }
+			  }
+			  
+	  		&:before{
+	  			@include setPosition(absolute, 0, auto, auto, 5px);
+	  			content: '';
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 7.5px 0 7.5px 10px;
+					border-color: transparent transparent transparent #ffffff;
+	  		}
+	  	}
+	  }
+	}
+}
+#webworkBlock{
+	background: -webkit-gradient(linear, top left, bottom left, from(#7baabe), to(#969ac6));
+	background: -webkit-linear-gradient(#7BAABE, #969AC6);
+	background: linear-gradient(#7BAABE,#969AC6);
+	.work{
+  	@include setSize(53vh, 40vh);
+ 	}
+}
+#illuworkBlock{
+	background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
+	background: -webkit-linear-gradient(#969AC6, #636F8F);
+	background: linear-gradient(#969AC6,#636F8F);
+	.worksArea{
+		height: 75vh;
+	}
+	#contactMe{	
+		@include setSize(100%, 50px);	
+		@include setPosition(absolute, auto, auto, 0, 0);
+	  line-height: 50px;
+	  color: white;
+	  #contact{
+	  	border-top: 1px solid rgba(231, 234, 234, 0.4);
+	  	width: 80%;
+	  	overflow: hidden;
+  		text-align: center;
+	  	margin: 0 auto;
+	  	span{
+	  		width: 210px;
+			  position: relative;
+			  display: block;
+			  margin: 0 auto;
+			  padding-right: 35px;
+	  	}
+	  	a{
+	  		@include setSize(30px,30px);
+	  		position: absolute;
+	  		margin: 5px 3px 0 0;
+	  		&.email{
+	  			@include setBackground("mail.png");	
+	  			right: 38px;
+	  		}
+	  		&.fb{
+	  			right: 0;
+	  			@include setBackground("fb.png");
+	  			border-radius: 50%;
+	  		}
+	  		
+	  	}
+	  }
+	}
 }
 
-#menu{
-	position: fixed;
-	width: 320px;
-	height: 100%;
-	z-index: 10;
-	left: -325px; 
-	box-shadow: 3px 0px 0px rgba(187, 187, 187, 0.4);
-	background-color: white;
-	top: 0;
+#mainImg{
+  margin: 0 auto ;
+	@include setSize(80%, 80vh);
+	>img{
+		@include setSize(100%,100%);
+		border-radius: 10px;
+	}
+}
+#preview{
+	@include setPosition(absolute, 0, auto, auto, 0);
+	@include setSize(100%,100%);
+	z-index: 20;
+	opacity: 0;
+	.bg{
+		@include setPosition(absolute, 0, auto, auto, 0);
+		@include setSize(100%,100%);
+		background-color: black;
+		opacity: 0.57;
+		z-index: -1;
+	}
+	.mainArea{
+		.close.clickable {
+			@include setPosition(absolute, 10px, 10px, auto, auto);
+		  @include setSize(45px, 45px);
+		  color: white;
+		    font-size: 35pt;
+		}
+		img {
+		  max-height: 60%;
+		  max-width: 60%;
+		}
+	}
+}
 
-	-webkit-transition: left 0.3s;
-	-moz-transition: left 0.3s;
-	transition: left 0.3s;
-}
-#menu.show{
-	left: 0; 
-}
-.bg{
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	background-color: black;
-	opacity: 0.3;
-	height: 100%;
-	width: 100%;
-	display: none;
-}
-#menu.show .bg{
-	display: block;
-}
-#myself {
-  height: 250px;
-  background: #64B5F6;
-  color: white;
-  font-size: 24pt;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 320px;
-}
-#myAvatar{
-	background: url('../images/150306SONA.jpg') 50% 50% no-repeat;
-	background-size: cover;
-	height: 100%;
-	width: 100%;
-
-}
-#myname {
-  position: absolute;
-  bottom: 16px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  text-shadow: 1px 1px 5px #000;
-}
-#menu_list {
-  padding: 250px 16px 0;
-  height: 100%;
-  list-style: none;
-  background: white;
-}
-#menu_list > li{
-	height: 40px;
-  margin: 10px 0;
-  font-weight: bold;
-  letter-spacing: 20px;
-  color: #9e9e9e;
-  cursor: pointer;
-}
-#menu_list > li.active{
-	color: #0288D1;
-}

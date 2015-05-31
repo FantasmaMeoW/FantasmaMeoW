@@ -1,117 +1,329 @@
 /*main color #0288D1 */
-/* line 5, ../sass/main.scss */
-body {
+/* line 4, ../sass/main.scss */
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+/* line 8, ../sass/main.scss */
+h1 {
+  font-size: 5em;
+  font-family: arial,helvetica;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 15, ../sass/main.scss */
+.intro p {
+  color: #fff;
+}
+
+/* line 18, ../sass/main.scss */
+.clickable {
+  cursor: pointer;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+/* line 23, ../sass/main.scss */
+.section {
+  text-align: center;
   position: relative;
 }
 
-/* line 9, ../sass/main.scss */
-#menubar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 64px;
-  width: 100%;
-  background-color: #0288D1;
-}
-
-/* line 17, ../sass/main.scss */
-#menubar #toggleMenu {
-  background: url("../images/icon_menu.png") 50% 50% no-repeat;
-  background-size: 48px 48px;
-  height: 48px;
-  width: 48px;
-  float: left;
-  margin: 8px;
-  cursor: pointer;
-}
-
-/* line 27, ../sass/main.scss */
-#menu {
-  position: fixed;
-  width: 320px;
-  height: 100%;
-  z-index: 10;
-  left: -325px;
-  box-shadow: 3px 0px 0px rgba(187, 187, 187, 0.4);
-  background-color: white;
-  top: 0;
-  -webkit-transition: left 0.3s;
-  -moz-transition: left 0.3s;
-  transition: left 0.3s;
-}
-
-/* line 41, ../sass/main.scss */
-#menu.show {
-  left: 0;
-}
-
-/* line 44, ../sass/main.scss */
-.bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-color: black;
-  opacity: 0.3;
-  height: 100%;
-  width: 100%;
-  display: none;
-}
-
-/* line 55, ../sass/main.scss */
-#menu.show .bg {
-  display: block;
-}
-
-/* line 58, ../sass/main.scss */
-#myself {
-  height: 250px;
-  background: #64B5F6;
-  color: white;
-  font-size: 24pt;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 320px;
-}
-
-/* line 68, ../sass/main.scss */
-#myAvatar {
-  background: url("../images/150306SONA.jpg") 50% 50% no-repeat;
+/* line 28, ../sass/main.scss */
+.twentytwenty-horizontal .twentytwenty-handle {
+  background: url("../images/phantom.png") 50% 50% no-repeat;
   background-size: cover;
+  height: 90px;
+  width: 120px;
+  margin-left: -63px;
+}
+/* line 32, ../sass/main.scss */
+.twentytwenty-horizontal .twentytwenty-handle .twentytwenty-left-arrow {
+  margin-left: -80px;
+}
+/* line 35, ../sass/main.scss */
+.twentytwenty-horizontal .twentytwenty-handle .twentytwenty-right-arrow {
+  margin-right: -80px;
+}
+/* line 38, ../sass/main.scss */
+.twentytwenty-horizontal .twentytwenty-handle:before {
+  margin-bottom: 50px;
+}
+/* line 41, ../sass/main.scss */
+.twentytwenty-horizontal .twentytwenty-handle:after {
+  margin-top: 50px;
+}
+
+/* line 45, ../sass/main.scss */
+.worksArea {
+  height: 65vh;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 48, ../sass/main.scss */
+.worksArea .work {
+  height: 29vh;
+  width: 38vh;
+  display: inline-block;
+  margin: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* line 54, ../sass/main.scss */
+.worksArea .work .workTitle {
+  height: 35px;
+  width: 100%;
+  margin-bottom: 5px;
+  line-height: 35px;
+  font-size: 20pt;
+  color: white;
+}
+/* line 61, ../sass/main.scss */
+.worksArea .work .img {
   height: 100%;
   width: 100%;
+  border-radius: 10px;
+  background-size: cover !important;
 }
 
-/* line 75, ../sass/main.scss */
-#myname {
-  position: absolute;
-  bottom: 16px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  text-shadow: 1px 1px 5px #000;
+/* Defining each section background and styles
+* --------------------------------------- */
+/* line 70, ../sass/main.scss */
+#MainBlock {
+  background: -webkit-gradient(linear, top left, bottom left, from(#4bbfc3), to(#7baabe));
+  background: -webkit-linear-gradient(#4bbfc3, #7baabe);
+  background: linear-gradient(#4bbfc3, #7baabe);
 }
-
-/* line 83, ../sass/main.scss */
-#menu_list {
-  padding: 250px 16px 0;
-  height: 100%;
-  list-style: none;
-  background: white;
-}
-
-/* line 89, ../sass/main.scss */
-#menu_list > li {
+/* line 74, ../sass/main.scss */
+#MainBlock #contacts {
   height: 40px;
-  margin: 10px 0;
-  font-weight: bold;
-  letter-spacing: 20px;
-  color: #9e9e9e;
+  width: 160px;
+  position: absolute;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  right: 20px;
+  z-index: 1;
+  padding-top: 5px;
+  border-radius: 0 0 10px 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* line 81, ../sass/main.scss */
+#MainBlock #contacts > div {
+  height: 30px;
+  width: 30px;
+  float: right;
+  margin: 2px 8px;
   cursor: pointer;
+  border-radius: 50%;
+}
+/* line 88, ../sass/main.scss */
+#MainBlock #contacts #fb {
+  margin-right: 18px;
+  background: url("../images/fb.png") 50% 50% no-repeat;
+  background-size: cover;
+}
+/* line 93, ../sass/main.scss */
+#MainBlock #contacts #pixiv {
+  background-color: #0096DB;
+  background: url("../images/pixiv.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+/* line 97, ../sass/main.scss */
+#MainBlock #contacts #github {
+  background: url("../images/GitHub-Mark.png") 50% 50% no-repeat;
+  background-size: cover;
+  background-color: white;
+}
+/* line 102, ../sass/main.scss */
+#MainBlock #menuTitle {
+  height: 80px;
+  width: 85%;
+  border-bottom: 1px solid rgba(231, 234, 234, 0.4);
+  margin: 0 auto 20px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 108, ../sass/main.scss */
+#MainBlock #menuTitle #nameLabel {
+  background: url("../images/title.png") 50% 50% no-repeat;
+  background-size: cover;
+  height: 75px;
+  width: 210px;
+  float: left;
+}
+/* line 113, ../sass/main.scss */
+#MainBlock #menuTitle #menu {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
+/* line 118, ../sass/main.scss */
+#MainBlock #menuTitle #menu > li {
+  height: 30px;
+  width: 80px;
+  list-style: none;
+  float: left;
+  text-align: left;
+  padding-left: 20px;
+  cursor: pointer;
+  position: relative;
+}
+/* line 126, ../sass/main.scss */
+#MainBlock #menuTitle #menu > li a {
+  text-decoration: none;
+  color: white;
+}
+/* line 129, ../sass/main.scss */
+#MainBlock #menuTitle #menu > li a:hover {
+  text-decoration: underline;
+}
+/* line 134, ../sass/main.scss */
+#MainBlock #menuTitle #menu > li:before {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  bottom: auto;
+  right: auto;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 0 7.5px 10px;
+  border-color: transparent transparent transparent #ffffff;
 }
 
-/* line 97, ../sass/main.scss */
-#menu_list > li.active {
-  color: #0288D1;
+/* line 147, ../sass/main.scss */
+#webworkBlock {
+  background: -webkit-gradient(linear, top left, bottom left, from(#7baabe), to(#969ac6));
+  background: -webkit-linear-gradient(#7baabe, #969ac6);
+  background: linear-gradient(#7baabe, #969ac6);
+}
+/* line 151, ../sass/main.scss */
+#webworkBlock .work {
+  height: 40vh;
+  width: 53vh;
+}
+
+/* line 155, ../sass/main.scss */
+#illuworkBlock {
+  background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636f8f));
+  background: -webkit-linear-gradient(#969ac6, #636f8f);
+  background: linear-gradient(#969ac6, #636f8f);
+}
+/* line 159, ../sass/main.scss */
+#illuworkBlock .worksArea {
+  height: 75vh;
+}
+/* line 162, ../sass/main.scss */
+#illuworkBlock #contactMe {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  line-height: 50px;
+  color: white;
+}
+/* line 167, ../sass/main.scss */
+#illuworkBlock #contactMe #contact {
+  border-top: 1px solid rgba(231, 234, 234, 0.4);
+  width: 80%;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+}
+/* line 173, ../sass/main.scss */
+#illuworkBlock #contactMe #contact span {
+  width: 210px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding-right: 35px;
+}
+/* line 180, ../sass/main.scss */
+#illuworkBlock #contactMe #contact a {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  margin: 5px 3px 0 0;
+}
+/* line 184, ../sass/main.scss */
+#illuworkBlock #contactMe #contact a.email {
+  background: url("../images/mail.png") 50% 50% no-repeat;
+  background-size: cover;
+  right: 38px;
+}
+/* line 188, ../sass/main.scss */
+#illuworkBlock #contactMe #contact a.fb {
+  right: 0;
+  background: url("../images/fb.png") 50% 50% no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+/* line 199, ../sass/main.scss */
+#mainImg {
+  margin: 0 auto;
+  height: 80vh;
+  width: 80%;
+}
+/* line 202, ../sass/main.scss */
+#mainImg > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* line 207, ../sass/main.scss */
+#preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  opacity: 0;
+}
+/* line 212, ../sass/main.scss */
+#preview .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.57;
+  z-index: -1;
+}
+/* line 220, ../sass/main.scss */
+#preview .mainArea .close.clickable {
+  position: absolute;
+  top: 10px;
+  left: auto;
+  bottom: auto;
+  right: 10px;
+  height: 45px;
+  width: 45px;
+  color: white;
+  font-size: 35pt;
+}
+/* line 226, ../sass/main.scss */
+#preview .mainArea img {
+  max-height: 60%;
+  max-width: 60%;
 }
