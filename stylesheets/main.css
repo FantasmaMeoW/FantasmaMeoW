@@ -206,30 +206,59 @@ h1 {
   border-width: 7.5px 0 7.5px 10px;
   border-color: transparent transparent transparent #ffffff;
 }
+/* line 150, ../sass/main.scss */
+#MainBlock #scrollHint {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  height: 70px;
+  width: 100%;
+}
+/* line 153, ../sass/main.scss */
+#MainBlock #scrollHint > div {
+  background: url("../images/scroll.png") 50% 50% no-repeat;
+  background-size: cover;
+  height: 70px;
+  width: 150px;
+  margin: 0 auto;
+}
+/* line 157, ../sass/main.scss */
+#MainBlock #scrollHint > div:hover {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
 
-/* line 151, ../sass/main.scss */
+/* line 171, ../sass/main.scss */
 #webworkBlock {
   background: -webkit-gradient(linear, top left, bottom left, from(#7baabe), to(#969ac6));
   background: -webkit-linear-gradient(#7baabe, #969ac6);
   background: linear-gradient(#7baabe, #969ac6);
 }
-/* line 155, ../sass/main.scss */
+/* line 175, ../sass/main.scss */
 #webworkBlock .work {
   height: 40vh;
   width: 53vh;
 }
 
-/* line 159, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 #illuworkBlock {
   background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636f8f));
   background: -webkit-linear-gradient(#969ac6, #636f8f);
   background: linear-gradient(#969ac6, #636f8f);
 }
-/* line 163, ../sass/main.scss */
+/* line 183, ../sass/main.scss */
 #illuworkBlock .worksArea {
   height: 75vh;
 }
-/* line 166, ../sass/main.scss */
+/* line 186, ../sass/main.scss */
 #illuworkBlock #contactMe {
   height: 50px;
   width: 100%;
@@ -241,7 +270,7 @@ h1 {
   line-height: 50px;
   color: white;
 }
-/* line 171, ../sass/main.scss */
+/* line 191, ../sass/main.scss */
 #illuworkBlock #contactMe #contact {
   border-top: 1px solid rgba(231, 234, 234, 0.4);
   width: 80%;
@@ -249,7 +278,7 @@ h1 {
   text-align: center;
   margin: 0 auto;
 }
-/* line 177, ../sass/main.scss */
+/* line 197, ../sass/main.scss */
 #illuworkBlock #contactMe #contact span {
   width: 210px;
   position: relative;
@@ -257,20 +286,20 @@ h1 {
   margin: 0 auto;
   padding-right: 35px;
 }
-/* line 184, ../sass/main.scss */
+/* line 204, ../sass/main.scss */
 #illuworkBlock #contactMe #contact a {
   height: 30px;
   width: 30px;
   position: absolute;
   margin: 5px 3px 0 0;
 }
-/* line 188, ../sass/main.scss */
+/* line 208, ../sass/main.scss */
 #illuworkBlock #contactMe #contact a.email {
   background: url("../images/mail.png") 50% 50% no-repeat;
   background-size: cover;
   right: 38px;
 }
-/* line 192, ../sass/main.scss */
+/* line 212, ../sass/main.scss */
 #illuworkBlock #contactMe #contact a.fb {
   right: 0;
   background: url("../images/fb.png") 50% 50% no-repeat;
@@ -278,20 +307,20 @@ h1 {
   border-radius: 50%;
 }
 
-/* line 203, ../sass/main.scss */
+/* line 223, ../sass/main.scss */
 #mainImg {
   margin: 0 auto;
   height: 80vh;
   width: 80%;
 }
-/* line 206, ../sass/main.scss */
+/* line 226, ../sass/main.scss */
 #mainImg > img {
   height: 100%;
   width: 100%;
   border-radius: 10px;
 }
 
-/* line 211, ../sass/main.scss */
+/* line 231, ../sass/main.scss */
 #preview {
   position: absolute;
   top: 0;
@@ -303,7 +332,7 @@ h1 {
   z-index: 20;
   opacity: 0;
 }
-/* line 216, ../sass/main.scss */
+/* line 236, ../sass/main.scss */
 #preview .bg {
   position: absolute;
   top: 0;
@@ -316,7 +345,7 @@ h1 {
   opacity: 0.57;
   z-index: -1;
 }
-/* line 224, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 #preview .mainArea .close.clickable {
   position: absolute;
   top: 10px;
@@ -328,8 +357,61 @@ h1 {
   color: white;
   font-size: 35pt;
 }
-/* line 230, ../sass/main.scss */
+/* line 250, ../sass/main.scss */
 #preview .mainArea img {
   max-height: 80vw;
   max-width: 95vh;
+}
+
+/* Pulse */
+@-webkit-keyframes hvr-pulse {
+  /* line 259, ../sass/main.scss */
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /* line 264, ../sass/main.scss */
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes hvr-pulse {
+  /* line 271, ../sass/main.scss */
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /* line 276, ../sass/main.scss */
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+/* line 282, ../sass/main.scss */
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 292, ../sass/main.scss */
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
