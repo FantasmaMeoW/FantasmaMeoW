@@ -63,7 +63,9 @@ $(document).ready(function() {
 		$('#illuworkBlock .worksArea').after(previewTmp(modelDate));
 		var height = ($(window).height() - $('#preview img').height())/2
 		$('#preview img').css('margin-top', height);
+		$('#preview').hide();
 		$('#preview').css('opacity', '1');
+		$('#preview').fadeIn();
 		
 		$('.close').one('click', function(){
   		$('#preview').fadeOut(function(){
