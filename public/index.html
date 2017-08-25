@@ -11,6 +11,18 @@
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
  
     <title>Phantom</title>
+    <meta property="og:url" content="https://google.com" >
+    <script>
+        var metas = document.getElementsByTagName('meta');
+        for (var i=0; i<metas.length; i++) { 
+          if (metas[i].getAttribute("property") == "og:url") { 
+              metas[i].setAttribute("content", window.location.origin + "/"); 
+          }
+        } 
+    } 
+    </script>
+
+
 
   </head>
 
