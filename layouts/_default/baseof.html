@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ .Lang }}">
+<head>
+    {{partial "head" . }}
+    {{ partial "meta" . }}
+    <link href="{{ "stylesheets/baseof.css" | relURL }}" rel="stylesheet" />
+    {{ range .Params.cssfile }}
+    <link href="{{ . | relURL }}" rel="stylesheet" />
+    {{ end }}
+</head>  
+<body class="{{ .Params.class }}">
+    {{ partial "nav.html" . }}
+    {{ partial "backtoTop.html" . }}
+    
+    <section class="{{ .Params.headerstyle | default "page-header"}}">
+        <div class="page-header-image" 
+            style="background-image: url('{{ (.Param "background") | relURL }}');"></div>
+
+    </section>
+
+    <section class="min-height {{ .Params.section | default "page-content"}}">
+    {{ block "body" . }}{{ end }}
+    </section>
+
+    {{ partial "footer" . }}
+    {{partial "javascript" . }}
+</body>
+</html>

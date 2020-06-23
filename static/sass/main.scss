@@ -1,0 +1,67 @@
+@import "_tool.scss";
+
+html{
+	overflow-x: hidden;
+}
+$footer-height: 60px;
+
+body{
+	@include setFont('Noto Sans TC');
+	font-size: 12pt;
+	margin: 0;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: left;
+	width: 100vw;
+	overflow-x: hidden;
+	color: #ffffff;
+	background-color: #1c1d22;
+	transition: opacity .3s ease-in;
+	position: relative;
+	padding-bottom: $footer-height;
+	overflow: hidden;
+}
+
+.container {
+	padding: 0 15px;
+	margin: 0 auto;
+	@media only screen and (min-width: 1400px) {
+		max-width: 1320px;
+	}
+	@media only screen and (min-width: 1600px) {
+		max-width: 1520px;
+	}
+}
+
+.main-page{
+	height: 100%;
+	overflow: hidden;
+}
+
+.index-area{
+	min-height: 300px;
+}
+
+/* Index Page */
+.banner-area{
+	height: 85vh;
+	#banner-twenty{
+		height: 85vh;
+		img{
+			height: 100%;
+			width: 100%;
+			&.image-banner{
+				background: url(../images/banner.jpg) 50% 50% no-repeat;
+				background-size: cover;
+			}
+			&.image-banner-cover{
+				background: url(../images/banner-cover.jpg) 50% 50% no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+	.twentytwenty-handle{
+		top: auto;
+		bottom: 5px;
+	}
+}

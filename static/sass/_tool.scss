@@ -1,0 +1,19 @@
+@mixin prefixer($property, $val){
+  -webkit-#{$property}: $val;
+  -moz-#{$property}: $val;
+  -ms-#{$property}: $val;
+  -o-#{$property}: $val;
+  #{$property}: $val;
+}
+
+@mixin setFont($font){
+	@if $font{
+		font-family: $font, 'Noto Sans', 'Microsoft YaHei', "Microsoft JhengHei", Arial, arial,"Helvetica Neue", monospace, sans-serif, 'lucida grande',tahoma,verdana;
+	} @else{
+		font-family: 'Noto Sans TC', 'Noto Sans', 'Microsoft YaHei', "Microsoft JhengHei", Arial, arial, "Helvetica Neue", monospace, sans-serif, 'lucida grande',tahoma,verdana;
+	}
+		
+}
+
+$mobile-width: 992px;
+$mini-mobile-width: 400px;

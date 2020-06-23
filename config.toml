@@ -1,0 +1,47 @@
+baseURL = "http://example.org/"
+languageCode = "zh-TW"
+hasCJKLanguage = true
+enableRobotsTXT = true
+summaryLength = 100
+googleAnalytics = ""
+
+title = "Phantom"
+description = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$", ".sass-cache/"]
+
+
+[taxonomies]
+    tag = "tags"
+
+
+# Site Menus
+[menu]
+    # Navbar Menus
+    [[menu.nav]]
+        name        = "Home"
+        url         = "/"
+        identifier  = "home"
+        weight      = 1
+
+   
+
+# Site Params
+[params]
+    [[params.sns]]
+    pre  = "fa fa-facebook"
+    icon = "sns/facebook.png"
+    name = "Facebook"
+    link = "https://www.facebook.com/rayark.inc/"
+
+    [[params.sns]]
+    pre  = "fa fa-twitter"
+    icon = "sns/twitter.png"
+    name = "Twitter"
+    link = "https://twitter.com/RayarkOfficial"
+    
+    [[params.sns]]
+    pre  = "fa fa-youtube-play"
+    icon = "sns/youtube.png"
+    name = "Youtube Official Channel"
+    link = "https://www.youtube.com/user/RayarkInc"
+
