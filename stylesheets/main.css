@@ -1,0 +1,81 @@
+/* line 3, ../sass/main.scss */
+html {
+  overflow-x: hidden;
+}
+
+/* line 8, ../sass/main.scss */
+body {
+  font-family: "Noto Sans TC", "Noto Sans", "Microsoft YaHei", "Microsoft JhengHei", Arial, arial, "Helvetica Neue", monospace, sans-serif, "lucida grande", tahoma, verdana;
+  font-size: 12pt;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  width: 100vw;
+  overflow-x: hidden;
+  color: #ffffff;
+  background-color: #1c1d22;
+  transition: opacity .3s ease-in;
+  position: relative;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+/* line 25, ../sass/main.scss */
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1400px) {
+  /* line 25, ../sass/main.scss */
+  .container {
+    max-width: 1320px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  /* line 25, ../sass/main.scss */
+  .container {
+    max-width: 1520px;
+  }
+}
+
+/* line 36, ../sass/main.scss */
+.main-page {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 41, ../sass/main.scss */
+.index-area {
+  min-height: 300px;
+}
+
+/* Index Page */
+/* line 46, ../sass/main.scss */
+.banner-area {
+  height: 85vh;
+}
+/* line 48, ../sass/main.scss */
+.banner-area #banner-twenty {
+  height: 85vh;
+}
+/* line 50, ../sass/main.scss */
+.banner-area #banner-twenty img {
+  height: 100%;
+  width: 100%;
+}
+/* line 53, ../sass/main.scss */
+.banner-area #banner-twenty img.image-banner {
+  background: url(../images/banner.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+/* line 57, ../sass/main.scss */
+.banner-area #banner-twenty img.image-banner-cover {
+  background: url(../images/banner-cover.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+/* line 63, ../sass/main.scss */
+.banner-area .twentytwenty-handle {
+  top: auto;
+  bottom: 5px;
+}
