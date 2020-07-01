@@ -12,33 +12,32 @@
 .sidebar .avatar {
   height: 150px;
   width: 100%;
-  background-color: red;
 }
-/* line 16, ../sass/nav.scss */
+/* line 15, ../sass/nav.scss */
 .sidebar #banner-twenty {
   height: 150px;
 }
-/* line 18, ../sass/nav.scss */
+/* line 17, ../sass/nav.scss */
 .sidebar #banner-twenty img {
   height: 100%;
   width: 100%;
 }
-/* line 21, ../sass/nav.scss */
+/* line 20, ../sass/nav.scss */
 .sidebar #banner-twenty img.image-banner {
   background: url(../images/banner.jpg) 50% 50% no-repeat;
   background-size: cover;
 }
-/* line 25, ../sass/nav.scss */
+/* line 24, ../sass/nav.scss */
 .sidebar #banner-twenty img.image-banner-cover {
   background: url(../images/banner-cover.jpg) 50% 50% no-repeat;
   background-size: cover;
 }
-/* line 31, ../sass/nav.scss */
+/* line 30, ../sass/nav.scss */
 .sidebar .twentytwenty-handle {
   top: auto;
   bottom: 5px;
 }
-/* line 35, ../sass/nav.scss */
+/* line 34, ../sass/nav.scss */
 .sidebar .page-nav {
   list-style: none;
   line-height: 2;
@@ -46,18 +45,18 @@
   padding: 5%;
   padding-left: calc(5% + 2em);
 }
-/* line 42, ../sass/nav.scss */
+/* line 41, ../sass/nav.scss */
 .sidebar .page-nav .nav-item:before {
   content: "-";
   margin: 10px;
   display: inline;
 }
-/* line 48, ../sass/nav.scss */
+/* line 47, ../sass/nav.scss */
 .sidebar .page-nav a {
   color: inherit;
   text-decoration: none;
 }
-/* line 51, ../sass/nav.scss */
+/* line 50, ../sass/nav.scss */
 .sidebar .page-nav a:hover {
   text-decoration: underline;
 }
