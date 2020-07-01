@@ -1,6 +1,19 @@
 {{ $currentPage := .  }}
 {{ $currentSection := .Section }}
-<section id="nav-bar" class="nav-bar animated-header">
 
+<section id="nav-bar" class="nav-bar sidebar">
+    <div id="banner-twenty" class="avatar">
+        <img class="image-banner" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAuQAAALkAQMAAAB9arImAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAFpJREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDYPxwAB1dfBLQAAAABJRU5ErkJggg==">
+        <!-- <img class="image-banner-cover" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAuQAAALkAQMAAAB9arImAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAFpJREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDYPxwAB1dfBLQAAAABJRU5ErkJggg=="> -->
+    </div>
+    <div class="page-nav">
+        {{ range .Site.Menus.nav }}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ .URL | relLangURL }}" {{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+              <span>{{ .Name }}</span>
+            </a>
+        </li>
+        {{ end }}
+    </div>
 </section>
 

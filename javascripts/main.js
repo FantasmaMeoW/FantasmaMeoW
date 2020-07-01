@@ -1,5 +1,4 @@
 
 $(function(){
-	$("#banner-twenty").twentytwenty()
 	
 })

@@ -1,0 +1,56 @@
+@import "_variables.scss";
+
+.sidebar{
+	height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: $nav-width;
+    color: #ffffff;
+	background-color: #1c1d22;
+    .avatar{
+        height: 150px;
+        width: 100%;
+        background-color: red;
+    }
+    #banner-twenty{
+		height: 150px;
+		img{
+			height: 100%;
+			width: 100%;
+			&.image-banner{
+				background: url(../images/banner.jpg) 50% 50% no-repeat;
+				background-size: cover;
+			}
+			&.image-banner-cover{
+				background: url(../images/banner-cover.jpg) 50% 50% no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+	.twentytwenty-handle{
+		top: auto;
+		bottom: 5px;
+    }
+    .page-nav{
+        list-style: none;
+        line-height: 2;
+        margin-top: 5%;
+        padding: 5%;
+        padding-left: calc(5% + 2em);
+        .nav-item{
+            &:before{
+                content: "-";
+                margin: 10px;
+                display: inline;
+            }
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

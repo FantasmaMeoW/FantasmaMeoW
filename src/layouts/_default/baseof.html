@@ -1,28 +1,25 @@
-<!doctype html>
-<html lang="{{ .Lang }}">
+<!DOCTYPE html>
+<html class="no-js" lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 <head>
-    {{partial "head" . }}
-    {{ partial "meta" . }}
-    <link href="{{ "stylesheets/baseof.css" | relURL }}" rel="stylesheet" />
-    {{ range .Params.cssfile }}
-    <link href="{{ . | relURL }}" rel="stylesheet" />
-    {{ end }}
-</head>  
-<body class="{{ .Params.class }}">
+	{{ partial "head.html" . }}
+</head>
+
+<body>
     {{ partial "nav.html" . }}
-    {{ partial "backtoTop.html" . }}
+    <section class="index-area main-area">
+        <section class="title-area">
+            <h1>
+                {{ .Title }}
+                {{with .Date }}
+                    <div class="date">{{.}}</div>
+                {{ end }}
+            </h1>
+        </section>
+        {{ block "body" . }}{{ end }}
+    </section>
     
-    <section class="{{ .Params.headerstyle | default "page-header"}}">
-        <div class="page-header-image" 
-            style="background-image: url('{{ (.Param "background") | relURL }}');"></div>
 
-    </section>
-
-    <section class="min-height {{ .Params.section | default "page-content"}}">
-    {{ block "body" . }}{{ end }}
-    </section>
-
-    {{ partial "footer" . }}
-    {{partial "javascript" . }}
+	{{ partial "footer.html" . }}
+	{{ partial "javascript.html" . }}
 </body>
 </html>

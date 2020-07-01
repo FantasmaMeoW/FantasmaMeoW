@@ -1,4 +1,7 @@
 @import "_tool.scss";
+@import "_variables.scss";
+@import "nav.scss";
+
 
 html{
 	overflow-x: hidden;
@@ -10,16 +13,18 @@ body{
 	font-size: 12pt;
 	margin: 0;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 2;
 	text-align: left;
 	width: 100vw;
 	overflow-x: hidden;
-	color: #ffffff;
-	background-color: #1c1d22;
+	color: #1c1d22;
+	background-color: #ffffff;
 	transition: opacity .3s ease-in;
 	position: relative;
 	padding-bottom: $footer-height;
 	overflow: hidden;
+
+	padding-left: $nav-width;
 }
 
 .container {
@@ -38,30 +43,70 @@ body{
 	overflow: hidden;
 }
 
-.index-area{
-	min-height: 300px;
+.flexbox{
+	display: flex;
+	display: -webkit-flex;
+	&.row{
+		flex-direction: row;
+	}
+	&.column{
+		flex-direction: column;
+	}
+}
+* {
+	box-sizing: border-box;
 }
 
+h1{
+	font-size: 30pt;
+}
+
+.main-area{
+	min-height: 300px;
+	width: 100%;
+	padding: 20px;
+	.title-area{
+		text-align: center;
+	}
+}
+
+pre{
+	background: #f5f5f5;
+    padding: 10px 20px;
+    width: 80%;
+}
+
+.title-area{
+	.date{
+		font-size: 12pt;
+		font-weight: normal;
+	}
+}
 /* Index Page */
-.banner-area{
-	height: 85vh;
-	#banner-twenty{
-		height: 85vh;
-		img{
-			height: 100%;
-			width: 100%;
-			&.image-banner{
-				background: url(../images/banner.jpg) 50% 50% no-repeat;
-				background-size: cover;
-			}
-			&.image-banner-cover{
-				background: url(../images/banner-cover.jpg) 50% 50% no-repeat;
-				background-size: cover;
-			}
+.index-area{
+	padding: 5px 10%;
+	.latest{
+		min-height: 130px;
+		width: 100%;
+		margin: 5px auto;
+		padding: 5px 15px;
+		a{
+			font-size: 14pt;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+		.date {
+			font-size: 10pt;
+		}
+		.summary{
+			line-height: 1.5;
+			font-size: 12pt;
 		}
 	}
-	.twentytwenty-handle{
-		top: auto;
-		bottom: 5px;
+	.divider{
+		width: 60%;
+		margin: 15px auto;
+		height: 1px;
+		background-color: #dedede;
 	}
 }

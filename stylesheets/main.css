@@ -1,81 +1,194 @@
-/* line 3, ../sass/main.scss */
+/* line 3, ../sass/nav.scss */
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  color: #ffffff;
+  background-color: #1c1d22;
+}
+/* line 11, ../sass/nav.scss */
+.sidebar .avatar {
+  height: 150px;
+  width: 100%;
+  background-color: red;
+}
+/* line 16, ../sass/nav.scss */
+.sidebar #banner-twenty {
+  height: 150px;
+}
+/* line 18, ../sass/nav.scss */
+.sidebar #banner-twenty img {
+  height: 100%;
+  width: 100%;
+}
+/* line 21, ../sass/nav.scss */
+.sidebar #banner-twenty img.image-banner {
+  background: url(../images/banner.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+/* line 25, ../sass/nav.scss */
+.sidebar #banner-twenty img.image-banner-cover {
+  background: url(../images/banner-cover.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+/* line 31, ../sass/nav.scss */
+.sidebar .twentytwenty-handle {
+  top: auto;
+  bottom: 5px;
+}
+/* line 35, ../sass/nav.scss */
+.sidebar .page-nav {
+  list-style: none;
+  line-height: 2;
+  margin-top: 5%;
+  padding: 5%;
+  padding-left: calc(5% + 2em);
+}
+/* line 42, ../sass/nav.scss */
+.sidebar .page-nav .nav-item:before {
+  content: "-";
+  margin: 10px;
+  display: inline;
+}
+/* line 48, ../sass/nav.scss */
+.sidebar .page-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 51, ../sass/nav.scss */
+.sidebar .page-nav a:hover {
+  text-decoration: underline;
+}
+
+/* line 6, ../sass/main.scss */
 html {
   overflow-x: hidden;
 }
 
-/* line 8, ../sass/main.scss */
+/* line 11, ../sass/main.scss */
 body {
   font-family: "Noto Sans TC", "Noto Sans", "Microsoft YaHei", "Microsoft JhengHei", Arial, arial, "Helvetica Neue", monospace, sans-serif, "lucida grande", tahoma, verdana;
   font-size: 12pt;
   margin: 0;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 2;
   text-align: left;
   width: 100vw;
   overflow-x: hidden;
-  color: #ffffff;
-  background-color: #1c1d22;
+  color: #1c1d22;
+  background-color: #ffffff;
   transition: opacity .3s ease-in;
   position: relative;
   padding-bottom: 60px;
   overflow: hidden;
+  padding-left: 250px;
 }
 
-/* line 25, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 .container {
   padding: 0 15px;
   margin: 0 auto;
 }
 @media only screen and (min-width: 1400px) {
-  /* line 25, ../sass/main.scss */
+  /* line 30, ../sass/main.scss */
   .container {
     max-width: 1320px;
   }
 }
 @media only screen and (min-width: 1600px) {
-  /* line 25, ../sass/main.scss */
+  /* line 30, ../sass/main.scss */
   .container {
     max-width: 1520px;
   }
 }
 
-/* line 36, ../sass/main.scss */
+/* line 41, ../sass/main.scss */
 .main-page {
   height: 100%;
   overflow: hidden;
 }
 
-/* line 41, ../sass/main.scss */
-.index-area {
+/* line 46, ../sass/main.scss */
+.flexbox {
+  display: flex;
+  display: -webkit-flex;
+}
+/* line 49, ../sass/main.scss */
+.flexbox.row {
+  flex-direction: row;
+}
+/* line 52, ../sass/main.scss */
+.flexbox.column {
+  flex-direction: column;
+}
+
+/* line 56, ../sass/main.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 60, ../sass/main.scss */
+h1 {
+  font-size: 30pt;
+}
+
+/* line 64, ../sass/main.scss */
+.main-area {
   min-height: 300px;
+  width: 100%;
+  padding: 20px;
+}
+/* line 68, ../sass/main.scss */
+.main-area .title-area {
+  text-align: center;
+}
+
+/* line 73, ../sass/main.scss */
+pre {
+  background: #f5f5f5;
+  padding: 10px 20px;
+  width: 80%;
+}
+
+/* line 80, ../sass/main.scss */
+.title-area .date {
+  font-size: 12pt;
+  font-weight: normal;
 }
 
 /* Index Page */
-/* line 46, ../sass/main.scss */
-.banner-area {
-  height: 85vh;
+/* line 86, ../sass/main.scss */
+.index-area {
+  padding: 5px 10%;
 }
-/* line 48, ../sass/main.scss */
-.banner-area #banner-twenty {
-  height: 85vh;
-}
-/* line 50, ../sass/main.scss */
-.banner-area #banner-twenty img {
-  height: 100%;
+/* line 88, ../sass/main.scss */
+.index-area .latest {
+  min-height: 130px;
   width: 100%;
+  margin: 5px auto;
+  padding: 5px 15px;
 }
-/* line 53, ../sass/main.scss */
-.banner-area #banner-twenty img.image-banner {
-  background: url(../images/banner.jpg) 50% 50% no-repeat;
-  background-size: cover;
+/* line 93, ../sass/main.scss */
+.index-area .latest a {
+  font-size: 14pt;
+  font-weight: bold;
+  text-decoration: underline;
 }
-/* line 57, ../sass/main.scss */
-.banner-area #banner-twenty img.image-banner-cover {
-  background: url(../images/banner-cover.jpg) 50% 50% no-repeat;
-  background-size: cover;
+/* line 98, ../sass/main.scss */
+.index-area .latest .date {
+  font-size: 10pt;
 }
-/* line 63, ../sass/main.scss */
-.banner-area .twentytwenty-handle {
-  top: auto;
-  bottom: 5px;
+/* line 101, ../sass/main.scss */
+.index-area .latest .summary {
+  line-height: 1.5;
+  font-size: 12pt;
+}
+/* line 106, ../sass/main.scss */
+.index-area .divider {
+  width: 60%;
+  margin: 15px auto;
+  height: 1px;
+  background-color: #dedede;
 }

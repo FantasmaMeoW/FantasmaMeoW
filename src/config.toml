@@ -2,8 +2,9 @@ baseURL = "http://example.org/"
 languageCode = "zh-TW"
 hasCJKLanguage = true
 enableRobotsTXT = true
-summaryLength = 100
+summaryLength = 20
 googleAnalytics = ""
+defaultMarkdownHandler = "blackfriday"
 
 title = "Phantom"
 description = ""
@@ -23,6 +24,11 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$", ".sass-cache/"]
         identifier  = "home"
         weight      = 1
 
+    [[menu.nav]]
+        name        = "Posts"
+        url         = "/posts"
+        identifier  = "posts"
+        weight      = 2
    
 
 # Site Params

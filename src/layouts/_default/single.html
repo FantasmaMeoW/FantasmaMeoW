@@ -1,0 +1,15 @@
+{{ define "body" }}
+    <div class="content-area">
+        {{ .Content }}
+    </div>
+    <div class="tags">
+        <span>Tags:</span>
+        {{$tagLan :=  len .Params.tags }}
+        {{ range $index, $ele := .Params.tags }}
+            <a href="{{ "/tags/" | relURL }}{{ $ele }}">{{ $ele }}</a>
+            {{ if ne ( add $index 1 )  $tagLan}}
+            <span> , </span>
+            {{ end }}
+        {{end}}
+    </div>
+{{ end }}
