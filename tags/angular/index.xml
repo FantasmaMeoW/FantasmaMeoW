@@ -6,10 +6,28 @@
     <description>Recent content in angular on Phantom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 01 Jul 2020 22:06:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 21:10:00 +0800</lastBuildDate>
     
 	<atom:link href="/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular -Some useful thing-</title>
+      <link>/posts/20200702command/</link>
+      <pubDate>Thu, 02 Jul 2020 21:10:00 +0800</pubDate>
+      
+      <guid>/posts/20200702command/</guid>
+      <description>Some useful thing *ngFor element &amp;lt;ng-container *ngFor=&amp;quot;let item of storagedata&amp;quot;&amp;gt; click event &amp;lt;button (click)</description>
+    </item>
+    
+    <item>
+      <title>Angular Directive</title>
+      <link>/posts/20200702directives/</link>
+      <pubDate>Thu, 02 Jul 2020 16:50:00 +0800</pubDate>
+      
+      <guid>/posts/20200702directives/</guid>
+      <description>Angular Directive At a high level, directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS&amp;rsquo;s HTML compiler ($compile) to attach a specified behavior to that DOM element (e.</description>
+    </item>
     
     <item>
       <title>Angular Basic</title>

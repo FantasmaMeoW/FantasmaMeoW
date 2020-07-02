@@ -68,66 +68,72 @@
         <h1 id="angular-basic">Angular Basic</h1>
 <h2 id="ngmodule">NgModule</h2>
 <ul>
-<li><code>app.module.ts</code></li>
-</ul>
-<pre><code>    import { BrowserModule } from '@angular/platform-browser';
-    import { NgModule } from '@angular/core';
+<li>
+<p><code>app.module.ts</code></p>
+<pre><code>  import { BrowserModule } from '@angular/platform-browser';
+  import { NgModule } from '@angular/core';
 
-    import { AppRoutingModule } from './app-routing.module';
-    import { AppComponent } from './app.component';
+  import { AppRoutingModule } from './app-routing.module';
+  import { AppComponent } from './app.component';
 
-    @NgModule({
-      declarations: [
-        AppComponent
-      ],
-      imports: [
-        BrowserModule,
-        AppRoutingModule
-      ],
-      providers: [],
-      bootstrap: [AppComponent]
-    })
-    export class AppModule { }
+  @NgModule({
+    declarations: [
+      AppComponent
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule { }
 
-</code></pre><ul>
+</code></pre></li>
 <li>
 <h3 id="metadata">MetaData</h3>
-</li>
-</ul>
-<pre><code>    @NgModule({
-      declarations: [
-        AppComponent
-      ],
-      imports: [
-        BrowserModule,
-        AppRoutingModule
-      ],
-      providers: [],
-      bootstrap: [AppComponent]
-    })
-</code></pre><ul>
-<li>declarations
+<pre><code>  @NgModule({
+    declarations: [
+      AppComponent
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+  })
+</code></pre></li>
+<li>
+<p>declarations</p>
 <ul>
 <li>project Component、Directive and Pipe</li>
 </ul>
 </li>
-<li>imports
+<li>
+<p>imports</p>
 <ul>
 <li>other needed</li>
 </ul>
 </li>
-<li>providers
+<li>
+<p>providers</p>
 <ul>
 <li>Component which need be used everywhere</li>
 </ul>
 </li>
-<li>bootstrap
+<li>
+<p>bootstrap</p>
 <ul>
 <li>Root Component</li>
 </ul>
 </li>
-<li>(exports)</li>
-<li>(entryComponents)</li>
+<li>
+<p>(exports)</p>
+</li>
+<li>
+<p>(entryComponents)</p>
+</li>
 </ul>
 <h2 id="component">Component</h2>
 <h2 id="template">Template</h2>
