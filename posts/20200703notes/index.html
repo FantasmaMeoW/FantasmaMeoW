@@ -57,38 +57,86 @@
     <section class="index-area main-area">
         <section class="title-area">
             <h1>
-                Posts
+                Angular Note
                 
-                    <div class="date">2020-07-03 18:00:00 &#43;0800 CST</div>
+                    <div class="date">2020-07-03 16:10:00 &#43;0800 CST</div>
                 
             </h1>
         </section>
         
-    <div class="content-area">
+    <div class="post-detail-area content-area">
+        <h3 id="component">component.*</h3>
+<ul>
+<li><code>.html</code> : template structure</li>
+<li><code>.scss/.css</code> : style</li>
+<li><code>.ts</code> : basic operation using typescript</li>
+<li><code>.spec</code> : test</li>
+</ul>
+<h3 id="modulets">module.ts</h3>
+<ul>
+<li>use @NgModule</li>
+<li>Declaring dependencies and metadata</li>
+</ul>
+<h3 id="servicets">service.ts</h3>
+<ul>
+<li>logic</li>
+<li>DI （Dependency Injection，依賴注入）</li>
+<li>How to use
+<ul>
+<li>A: in <code>.sevice.ts</code>
+<pre><code>@Injectable({
+  providedIn: 'root'
+})
+</code></pre><ul>
+<li>can be used under <code>root</code></li>
+</ul>
+</li>
+<li>B: in <code>.module.ts</code>
+<pre><code>@NgModule({
+  providers: [
+    Service,
+    ...
+  ],
+  ...
+})
+</code></pre><ul>
+<li>can be used under <code>root</code></li>
+<li>不同module使用到的同名service會是同個實體</li>
+</ul>
+</li>
+<li>C: in <code>component.ts</code>
+<pre><code>@Component({
+  selector:    'app-hero-list',
+  templateUrl: './hero-list.component.html',
+  providers:  [ HeroService ]
+})
+</code></pre><ul>
+<li>can be used under <code>Component</code></li>
+<li>不同Component宣告的service都是<code>不同</code>的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="modelts">model.ts</h3>
+<ul>
+<li>logic CRUD about model</li>
+</ul>
+<h3 id="enumts">enum.ts</h3>
+<p>status type list</p>
+
+    </div>
+    <div class="tags">
+        <span>Tags:</span>
         
-            <li>
-                <a href="/posts/20200703route/">2020-07-03 | Angular Routing</a>
-            </li>
         
-            <li>
-                <a href="/posts/20200703notes/">2020-07-03 | Angular Note</a>
-            </li>
+            <a href="/tags/angular">angular</a>
+            
+            <span> , </span>
+            
         
-            <li>
-                <a href="/posts/20200702command/">2020-07-02 | Angular -Some useful thing-</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200702directives/">2020-07-02 | Angular Directive</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200701data/">2020-07-01 | Angular Basic</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200701/">2020-07-01 | Angular Startup Note</a>
-            </li>
+            <a href="/tags/coding">coding</a>
+            
         
     </div>
 

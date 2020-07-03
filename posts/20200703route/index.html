@@ -57,38 +57,125 @@
     <section class="index-area main-area">
         <section class="title-area">
             <h1>
-                Posts
+                Angular Routing
                 
                     <div class="date">2020-07-03 18:00:00 &#43;0800 CST</div>
                 
             </h1>
         </section>
         
-    <div class="content-area">
+    <div class="post-detail-area content-area">
+        <h2 id="basic">Basic</h2>
+<ul>
+<li>
+<p>app-routing.module.ts</p>
+<pre><code>const routes: Routes = [
+  {
+    path: 'routeA',
+    component: RouteAComponent
+  },
+  {
+    path: 'routeB',
+    component: RouteBComponent
+  }
+];
+  
+@NgModule({
+  imports: [RouterModule.forRoot(routes, {
+    enableTracing: true,
+    useHash: true
+  })],
+  exports: [RouterModule]
+})
+</code></pre></li>
+<li>
+<p>.html</p>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;&lt;a [routerLink]=&quot;'/home'&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a [routerLink]=&quot;'/about'&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><ul>
+<li>active status</li>
+</ul>
+<pre><code>&lt;li&gt;
+    &lt;a routerLink=&quot;/home&quot;
+      routerLinkActive=&quot;active&quot;&gt;
+      Home
+    &lt;/a&gt;
+&lt;/li&gt;
+</code></pre></li>
+</ul>
+<h2 id="lazy-loaded">lazy-loaded</h2>
+<h3 id="normal">Normal</h3>
+<ul>
+<li>
+<p>app.module.ts</p>
+<pre><code>import { targetModule } from '~';
+
+@NgModule({
+  declarations: [
+    ...
+  ],
+  imports: [
+    ...
+    FeatureModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+</code></pre></li>
+<li>
+<p>lazy-loaded</p>
+<ul>
+<li>remove code above</li>
+<li><code>target-routing.module.ts</code>
+<pre><code>const routes: Routes = [
+  {
+    path: '',
+    component: targetComponent
+  }
+];
+</code></pre></li>
+<li><code>app-routing.module.ts</code>
+<pre><code>{
+  path: 'target',
+  loadChildren: './target/target.module#targetModule'
+}
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>pre-loaded</p>
+<ul>
+<li>Basic on lazy-loaded</li>
+<li><code>app-routing.module.ts</code>
+<pre><code>import { PreloadAllModules } from '@angular/router';
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes, {
+    useHash: true,
+    preloadingStrategy: PreloadAllModules
+  })],
+  exports: [RouterModule],
+  providers: []
+})
+</code></pre></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+    <div class="tags">
+        <span>Tags:</span>
         
-            <li>
-                <a href="/posts/20200703route/">2020-07-03 | Angular Routing</a>
-            </li>
         
-            <li>
-                <a href="/posts/20200703notes/">2020-07-03 | Angular Note</a>
-            </li>
+            <a href="/tags/angular">angular</a>
+            
+            <span> , </span>
+            
         
-            <li>
-                <a href="/posts/20200702command/">2020-07-02 | Angular -Some useful thing-</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200702directives/">2020-07-02 | Angular Directive</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200701data/">2020-07-01 | Angular Basic</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200701/">2020-07-01 | Angular Startup Note</a>
-            </li>
+            <a href="/tags/coding">coding</a>
+            
         
     </div>
 
