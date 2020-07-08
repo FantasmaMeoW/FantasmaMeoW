@@ -220,3 +220,8 @@ pre code {
   height: 1px;
   background-color: #dedede;
 }
+
+/* line 141, ../sass/main.scss */
+.tags {
+  margin-top: 20%;
+}

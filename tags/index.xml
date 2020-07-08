@@ -6,26 +6,35 @@
     <description>Recent content in Tags on Phantom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 02 Jul 2020 21:10:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 21:00:00 +0800</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>angular</title>
-      <link>/tags/angular/</link>
-      <pubDate>Thu, 02 Jul 2020 21:10:00 +0800</pubDate>
+      <title>coding</title>
+      <link>/tags/coding/</link>
+      <pubDate>Wed, 08 Jul 2020 21:00:00 +0800</pubDate>
       
-      <guid>/tags/angular/</guid>
+      <guid>/tags/coding/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>coding</title>
-      <link>/tags/coding/</link>
-      <pubDate>Thu, 02 Jul 2020 21:10:00 +0800</pubDate>
+      <title>k8s</title>
+      <link>/tags/k8s/</link>
+      <pubDate>Wed, 08 Jul 2020 21:00:00 +0800</pubDate>
       
-      <guid>/tags/coding/</guid>
+      <guid>/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>angular</title>
+      <link>/tags/angular/</link>
+      <pubDate>Fri, 03 Jul 2020 18:00:00 +0800</pubDate>
+      
+      <guid>/tags/angular/</guid>
       <description></description>
     </item>
     

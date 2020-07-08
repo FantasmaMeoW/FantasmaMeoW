@@ -57,26 +57,43 @@
     <section class="index-area main-area">
         <section class="title-area">
             <h1>
-                Tags
+                Dashboard Start
                 
                     <div class="date">2020-07-08 21:00:00 &#43;0800 CST</div>
                 
             </h1>
         </section>
         
-    <div class="content-area">
+    <div class="post-detail-area content-area">
+        <h1 id="getting-started">getting-started</h1>
+<ul>
+<li><a href="https://github.com/kubernetes/dashboard/blob/master/docs/developer/getting-started.md">https://github.com/kubernetes/dashboard/blob/master/docs/developer/getting-started.md</a></li>
+</ul>
+<h2 id="preparation">Preparation</h2>
+<p>Clone the repository into <code>$GOPATH/src/github.com/kubernetes/dashboard</code> and install the dependencies:</p>
+<pre><code>$ npm ci
+</code></pre><h2 id="running-the-cluster">Running the cluster</h2>
+<pre><code>$ kubectl proxy
+</code></pre><h3 id="and-start-serve">and Start Serve</h3>
+<pre><code>$ npm start
+</code></pre><h3 id="check">check</h3>
+<p>open</p>
+<ul>
+<li><a href="http://localhost:8080/#/error?namespace=default">http://localhost:8080/#/error?namespace=default</a></li>
+</ul>
+
+    </div>
+    <div class="tags">
+        <span>Tags:</span>
         
-            <li>
-                <a href="/tags/coding/">2020-07-08 | coding</a>
-            </li>
         
-            <li>
-                <a href="/tags/k8s/">2020-07-08 | k8s</a>
-            </li>
+            <a href="/tags/k8s">k8s</a>
+            
+            <span> , </span>
+            
         
-            <li>
-                <a href="/tags/angular/">2020-07-03 | angular</a>
-            </li>
+            <a href="/tags/coding">coding</a>
+            
         
     </div>
 

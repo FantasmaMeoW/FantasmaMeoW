@@ -6,10 +6,39 @@
     <description>Recent content in coding on Phantom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 02 Jul 2020 21:10:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 21:00:00 +0800</lastBuildDate>
     
 	<atom:link href="/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dashboard Start</title>
+      <link>/posts/20200708dashboart/</link>
+      <pubDate>Wed, 08 Jul 2020 21:00:00 +0800</pubDate>
+      
+      <guid>/posts/20200708dashboart/</guid>
+      <description>getting-started  https://github.com/kubernetes/dashboard/blob/master/docs/developer/getting-started.md  Preparation Clone the repository into $GOPATH/src/github.com/kubernetes/dashboard and install the dependencies:
+$ npm ci Running the cluster $ kubectl proxy and Start Serve $ npm start check open</description>
+    </item>
+    
+    <item>
+      <title>Angular Routing</title>
+      <link>/posts/20200703route/</link>
+      <pubDate>Fri, 03 Jul 2020 18:00:00 +0800</pubDate>
+      
+      <guid>/posts/20200703route/</guid>
+      <description>Basic   app-routing.module.ts
+const routes: Routes = [ { path: &#39;routeA&#39;, component: RouteAComponent }, { path: &#39;routeB&#39;, component: RouteBComponent } ]; @NgModule({ imports: [RouterModule.</description>
+    </item>
+    
+    <item>
+      <title>Angular Note</title>
+      <link>/posts/20200703notes/</link>
+      <pubDate>Fri, 03 Jul 2020 16:10:00 +0800</pubDate>
+      
+      <guid>/posts/20200703notes/</guid>
+      <description>component.* .html : template structure .scss/.css : style .ts : basic operation using typescript .spec : test module.ts use @NgModule</description>
+    </item>
     
     <item>
       <title>Angular -Some useful thing-</title>

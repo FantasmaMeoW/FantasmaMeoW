@@ -1,17 +1,25 @@
 User-agent: *
 
 
-Disallow: /tags/angular/
-
-Disallow: /posts/20200702command/
-
 Disallow: /tags/coding/
 
+Disallow: /posts/20200708dashboart/
 
+
+
+Disallow: /tags/k8s/
 
 Disallow: /posts/
 
 Disallow: /tags/
+
+Disallow: /tags/angular/
+
+Disallow: /posts/20200703route/
+
+Disallow: /posts/20200703notes/
+
+Disallow: /posts/20200702command/
 
 Disallow: /posts/20200702directives/
 
