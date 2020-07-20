@@ -57,46 +57,62 @@
     <section class="index-area main-area">
         <section class="title-area">
             <h1>
-                Posts
+                How to add a page
                 
                     <div class="date">2020-07-20 20:00:00 &#43;0800 CST</div>
                 
             </h1>
         </section>
         
-    <div class="content-area">
+    <div class="post-detail-area content-area">
+        <h1 id="dashboard-add-a-page">Dashboard Add A Page</h1>
+<ul>
+<li>in <a href="https://github.com/srcmesh/frontend-mockup">Mockup</a> Case</li>
+</ul>
+<ol>
+<li>
+<h3 id="create-page-folder">Create Page folder</h3>
+<p>newPage/
+├── subpage/(if needed)
+├── module.ts
+├── routing.ts
+├── component.ts
+└── template.html (if needed)</p>
+</li>
+<li>
+<h3 id="add-in-chromeroutingts">Add in chrome/routing.ts</h3>
+<ul>
+<li>import page module (Lazy load)</li>
+</ul>
+<pre><code>{
+    path: 'workloads',
+    loadChildren: () =&gt; 
+    import('../newPage/module')
+    .then(m =&gt; m.NewPageModule),
+},
+</code></pre></li>
+<li>
+<h3 id="add-link-dome-in-chromenavtemplatehtml">Add Link Dome in chrome/nav/template.html</h3>
+<pre><code>&lt;app-nav-item 
+    class=&quot;kd-nav-group-item&quot;
+    state=&quot;/workloads&quot;
+    id=&quot;nav-workloads&quot;&gt;Workloads
+&lt;/app-nav-item&gt;
+</code></pre></li>
+</ol>
+
+    </div>
+    <div class="tags">
+        <span>Tags:</span>
         
-            <li>
-                <a href="/posts/20200720add/">2020-07-20 | How to add a page</a>
-            </li>
         
-            <li>
-                <a href="/posts/20200708dashboart/">2020-07-08 | Dashboard Start</a>
-            </li>
+            <a href="/tags/k8s">k8s</a>
+            
+            <span> , </span>
+            
         
-            <li>
-                <a href="/posts/20200703route/">2020-07-03 | Angular Routing</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200703notes/">2020-07-03 | Angular Note</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200702command/">2020-07-02 | Angular -Some useful thing-</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200702directives/">2020-07-02 | Angular Directive</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200701data/">2020-07-01 | Angular Basic</a>
-            </li>
-        
-            <li>
-                <a href="/posts/20200701/">2020-07-01 | Angular Startup Note</a>
-            </li>
+            <a href="/tags/coding">coding</a>
+            
         
     </div>
 
